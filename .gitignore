@@ -4,4 +4,9 @@ test.sh
 nvim
 
 spell/
-lazy-lock.json
+
+lazy/
+plugin/
+*.log
+.luarc.json
+.stylua.toml

@@ -10,6 +10,7 @@ vim.keymap.set("n", "<leader>e", ":Oil<CR>", { desc = "Toggle File Explorer" })
 vim.keymap.set("n", "<leader>ww", ":w<CR>", { desc = "Save File" })
 vim.keymap.set("n", "<leader>wa", ":wa<CR>", { desc = "Save All Files" })
 vim.keymap.set("n", "<leader>wq", ":wq<CR>", { desc = "Save and Quit" })
+vim.keymap.set("n", "<leader>qq", ":q<CR>", { desc = "Quit" })
 vim.keymap.set("n", "<leader>wn", ":bnext<CR>", { desc = "Next Buffer" })
 vim.keymap.set("n", "<leader>wp", ":bprevious<CR>", { desc = "Previous Buffer" })
 vim.keymap.set("n", "<leader>wv", ":vsplit<CR>", { desc = "Split Window Vertically" })
@@ -22,7 +23,7 @@ vim.keymap.set("n", "<leader>gn", "<C-w>l", { desc = "Focus Right Window" })
 
 -- NOTE these are already configured in lsp 
 -- vim.keymap.set("n", "<leader>rn", ":lua vim.lsp.buf.rename()<CR>", { desc = "Rename Symbol" }) -- Requires LSP
--- vim.keymap.set("n", "<leader>rf", ":lua vim.lsp.buf.format({ async = true })<CR>", { desc = "Format Document" }) -- Requires LSP
+ vim.keymap.set("n", "<leader>rf", ":lua vim.lsp.buf.format({ async = true })<CR>", { desc = "Format Document" }) -- Requires LSP
 -- vim.keymap.set("n", "<leader>ca", ":lua vim.lsp.buf.code_action()<CR>", { desc = "Code Action" }) -- Requires LSP
 
 -- Errors

@@ -15,6 +15,7 @@ return {
         "cssls",
         "omnisharp",
         "eslint",
+        "lua_ls",
   },
   automatic_installation = true,
   })

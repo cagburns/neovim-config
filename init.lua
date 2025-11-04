@@ -6,4 +6,4 @@ require("config.keymaps")
 require("config.autocmds")
 require("config.lazy")
 
-vim.cmd[[colorscheme gruvbox]]
+vim.cmd [[colorscheme sobrio]]

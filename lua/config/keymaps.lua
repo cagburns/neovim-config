@@ -1,8 +1,8 @@
 -- Views/Sidebars
 vim.keymap.set("n", "<leader>e", ":Oil<CR>", { desc = "Toggle File Explorer" })
--- vim.keymap.set("n", "<leader>vg", ":Git<CR>", { desc = "Open Git Status" }) -- Requires fugitive or lazygit
+ vim.keymap.set("n", "<leader>vg", ":Neogit<CR>", { desc = "Open Git Status" }) -- Requires fugitive or lazygit
 -- vim.keymap.set("n", "<leader>vd", ":lua require'dap'.toggle_breakpoint()<CR>", { desc = "Toggle Debugger" }) -- Requires nvim-dap
--- vim.keymap.set("n", "<leader>vo", ":copen<CR>", { desc = "Toggle Quickfix" })
+vim.keymap.set("n", "<leader>vo", ":copen<CR>", { desc = "Toggle Quickfix" })
 -- vim.keymap.set("n", "<leader>vt", ":ToggleTerm<CR>", { desc = "Toggle Terminal" }) -- Requires toggleterm.nvim
 -- vim.keymap.set("n", "<leader>vc", ":ChatGPT<CR>", { desc = "Open ChatGPT" }) -- Requires ChatGPT.nvim
 

@@ -1,6 +1,6 @@
 return {
     'nvim-telescope/telescope.nvim', tag = '0.1.8',
-      dependencies = { 
+      dependencies = {
         'nvim-lua/plenary.nvim',
         'BurntSushi/ripgrep',
          {'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
@@ -9,7 +9,7 @@ return {
     require("telescope").setup({
       defaults = {
         vimgrep_arguments = {
-          'rg', 
+          'rg',
           '--no-heading',
           '--with-filename',
           '--line-number',
@@ -19,7 +19,6 @@ return {
         file_ignore_patterns = { "node_modules", "build", "dist" },
         mappings = {
           i = {
-            ["<C-u>"] = false,
             ["<C-u>"] = false,
         },
       },

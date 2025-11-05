@@ -1,10 +1,10 @@
 -- Views/Sidebars
 vim.keymap.set("n", "<leader>e", ":Oil<CR>", { desc = "Toggle File Explorer" })
- vim.keymap.set("n", "<leader>vg", ":Neogit<CR>", { desc = "Open Git Status" }) -- Requires fugitive or lazygit
--- vim.keymap.set("n", "<leader>vd", ":lua require'dap'.toggle_breakpoint()<CR>", { desc = "Toggle Debugger" }) -- Requires nvim-dap
+ vim.keymap.set("n", "<leader>vg", ":Neogit<CR>", { desc = "Open Git Status" })
 vim.keymap.set("n", "<leader>vo", ":copen<CR>", { desc = "Toggle Quickfix" })
--- vim.keymap.set("n", "<leader>vt", ":ToggleTerm<CR>", { desc = "Toggle Terminal" }) -- Requires toggleterm.nvim
+vim.keymap.set("n", "<leader>vt", ":ToggleTerm<CR>", { desc = "Toggle Terminal" }) -- Requires toggleterm.nvim
 -- vim.keymap.set("n", "<leader>vc", ":ChatGPT<CR>", { desc = "Open ChatGPT" }) -- Requires ChatGPT.nvim
+-- vim.keymap.set("n", "<leader>vd", ":lua require'dap'.toggle_breakpoint()<CR>", { desc = "Toggle Debugger" }) -- Requires nvim-dap
 
 -- Editor Management
 vim.keymap.set("n", "<leader>ww", ":w<CR>", { desc = "Save File" })
@@ -23,13 +23,13 @@ vim.keymap.set("n", "<leader>gn", "<C-w>l", { desc = "Focus Right Window" })
 
 -- NOTE these are already configured in lsp 
 -- vim.keymap.set("n", "<leader>rn", ":lua vim.lsp.buf.rename()<CR>", { desc = "Rename Symbol" }) -- Requires LSP
- vim.keymap.set("n", "<leader>rf", ":lua vim.lsp.buf.format({ async = true })<CR>", { desc = "Format Document" }) -- Requires LSP
+ vim.keymap.set("n", "<leader>rf", ":Prettier<CR>", { desc = "Format Document" })
 -- vim.keymap.set("n", "<leader>ca", ":lua vim.lsp.buf.code_action()<CR>", { desc = "Code Action" }) -- Requires LSP
 
 -- Errors
--- vim.keymap.set("n", "<leader>vp", ":TroubleToggle<CR>", { desc = "Toggle Problems" }) -- Requires Trouble.nvim
-vim.keymap.set("n", "<leader>]d", ":lua vim.diagnostic.goto_next()<CR>", { desc = "Next Diagnostic" }) -- Requires LSP
-vim.keymap.set("n", "<leader>[d", ":lua vim.diagnostic.goto_prev()<CR>", { desc = "Previous Diagnostic" }) -- Requires LSP
+vim.keymap.set("n", "<leader>tt", "<cmd>Trouble diagnostics toggle<cr>", { desc = "Toggle Trouble" })
+vim.keymap.set("n", "<leader>]d", ":lua vim.diagnostic.goto_next()<CR>", { desc = "Next Diagnostic" })
+vim.keymap.set("n", "<leader>[d", ":lua vim.diagnostic.goto_prev()<CR>", { desc = "Previous Diagnostic" })
 
 -- Search
 -- NOTE: Already configured in telescope
@@ -39,3 +39,6 @@ vim.keymap.set("n", "<leader>[d", ":lua vim.diagnostic.goto_prev()<CR>", { desc 
 -- Navigation
 vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Scroll Down and Center" })
 vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Scroll Up and Center" })
+
+-- Init.lua
+vim.keymap.set("n", "<leader>mv", ":e $MYVIMRC<CR>", { desc = "Open Init.lua" })

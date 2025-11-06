@@ -46,5 +46,6 @@ return {
   vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Find Buffers" })
   vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Help Tags" })
   vim.keymap.set("n", "<leader>fk", builtin.keymaps, { desc = "Key Maps" })
+  vim.keymap.set("n", "<leader>fq", builtin.quickfix, { desc = "Quickfix List" })
   end,
 }

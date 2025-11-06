@@ -1,7 +1,10 @@
 return {
   "folke/trouble.nvim",
-  opts = {}, -- for default options, refer to the configuration section for custom setup.
   cmd = "Trouble",
+  opts = {
+  auto_close = true,
+  focus = true,
+  },
   keys = {
     {
       "<leader>xx",
@@ -34,4 +37,5 @@ return {
       desc = "Quickfix List (Trouble)",
     },
   },
+
 }

@@ -23,7 +23,6 @@ vim.keymap.set("n", "<leader>gn", "<C-w>l", { desc = "Focus Right Window" })
 
 -- NOTE these are already configured in lsp 
 -- vim.keymap.set("n", "<leader>rn", ":lua vim.lsp.buf.rename()<CR>", { desc = "Rename Symbol" }) -- Requires LSP
- vim.keymap.set("n", "<leader>rf", ":Prettier<CR>", { desc = "Format Document" })
 -- vim.keymap.set("n", "<leader>ca", ":lua vim.lsp.buf.code_action()<CR>", { desc = "Code Action" }) -- Requires LSP
 
 -- Errors

@@ -16,6 +16,7 @@ return {
 		quickfile = { enabled = true },
 		scope = { enabled = true },
 		scroll = { enabled = true },
+		scratch = { enabled = false },
 		terminal = { enabled = false },
 		statuscolumn = { enabled = true },
 		lazygit = { enabled = false },

@@ -1,3 +1,4 @@
+--
 -- Views/Sidebars
 vim.keymap.set("n", "<leader>e", ":Oil<CR>", { desc = "Toggle File Explorer" })
 vim.keymap.set("n", "<leader>vg", ":Neogit<CR>", { desc = "Open Git Status" })
@@ -46,3 +47,7 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Scroll Up and Center" })
 -- Init.lua
 -- Don't really need this cause of telescope
 -- vim.keymap.set("n", "<leader>mv", ":e $MYVIMRC<CR>", { desc = "Open Init.lua" })
+
+-- Leap.nvim
+vim.keymap.set("n", "s", "<Plug>(leap)", { desc = "Leap" })
+vim.keymap.set("n", "S", "<Plug>(leap-from-window)", { desc = "Leap Forward From Window" })

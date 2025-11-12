@@ -88,6 +88,7 @@ return {
     })
 
     vim.lsp.config("lua_ls", {
+      on_attach = on_attach,
       settings = {
         Lua = {
           diagnostics = {

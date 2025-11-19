@@ -1,4 +1,3 @@
-
 -- Enable relative line numbers
 vim.opt.number = true
 vim.opt.relativenumber = true
@@ -38,3 +37,6 @@ vim.opt.splitright = true
 vim.opt.splitbelow = true
 
 vim.opt.clipboard = "unnamedplus"
+
+vim.opt.scrolloff = 8
+vim.opt.sidescrolloff = 8

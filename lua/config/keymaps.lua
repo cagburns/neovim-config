@@ -1,10 +1,8 @@
---
 -- Views/Sidebars
-vim.keymap.set("n", "<leader>e", ":Oil<CR>", { desc = "Toggle File Explorer" })
+vim.keymap.set("n", "<leader>ee", ":Oil<CR>", { desc = "Toggle File Explorer" })
 vim.keymap.set("n", "<leader>vg", ":Neogit<CR>", { desc = "Open Git Status" })
 vim.keymap.set("n", "<leader>vo", ":copen<CR>", { desc = "Toggle Quickfix" })
 vim.keymap.set("n", "<leader>vt", ":ToggleTerm<CR>", { desc = "Toggle Terminal" }) -- Requires toggleterm.nvim
--- vim.keymap.set("n", "<leader>vc", ":ChatGPT<CR>", { desc = "Open ChatGPT" }) -- Requires ChatGPT.nvim
 -- vim.keymap.set("n", "<leader>vd", ":lua require'dap'.toggle_breakpoint()<CR>", { desc = "Toggle Debugger" }) -- Requires nvim-dap
 
 -- Editor Management
@@ -43,10 +41,6 @@ vim.keymap.set("n", "<leader>ep", ":lua vim.diagnostic.goto_prev()<CR>", { desc 
 -- Navigation
 vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Scroll Down and Center" })
 vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Scroll Up and Center" })
-
--- Init.lua
--- Don't really need this cause of telescope
--- vim.keymap.set("n", "<leader>mv", ":e $MYVIMRC<CR>", { desc = "Open Init.lua" })
 
 -- Leap.nvim
 vim.keymap.set("n", "s", "<Plug>(leap)", { desc = "Leap" })

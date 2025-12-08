@@ -83,18 +83,18 @@ return {
           useFlatConfig = nil,
         },
       },
-      root_dir = function(fname)
-        local util = require("lspconfig.util")
-        return util.root_pattern(
-          ".eslintrc",
-          ".eslintrc.js",
-          ".eslintrc.json",
-          ".eslintrc.cjs",
-          "eslint.config.js",
-          "eslint.config.mjs",
-          "eslint.config.cjs"
-        )(fname) or util.find_git_ancestor(fname)
-      end,
+      -- root_dir = function(fname)
+      --   local util = require("lspconfig.util")
+      --   return util.root_pattern(
+      --     ".eslintrc",
+      --     ".eslintrc.js",
+      --     ".eslintrc.json",
+      --     ".eslintrc.cjs",
+      --     "eslint.config.js",
+      --     "eslint.config.mjs",
+      --     "eslint.config.cjs"
+      --   )(fname) or util.find_git_ancestor(fname)
+      -- end,
     })
 
     vim.lsp.config("roslyn", {

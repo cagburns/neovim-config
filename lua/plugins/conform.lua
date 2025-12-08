@@ -5,6 +5,13 @@ return {
     local conform = require("conform")
 
     conform.setup({
+      -- formatters = {
+      --   prettier = {
+      --     command = "C:\\git\\Unify\\Src\\TW.Gem.WebUI\\app\\node_modules\\.bin\\prettier.cmd",
+      --     args = { "--stdin-filepath", "$FILENAME" },
+      --     stdin = true,
+      --   },
+      -- },
       formatters_by_ft = {
         lua = { "stylua" },
         javascript = { "prettier" },

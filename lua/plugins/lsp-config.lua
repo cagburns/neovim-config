@@ -71,14 +71,35 @@ return {
 
 		-- ESLint
 		vim.lsp.config("eslint", {
-			on_attach = on_attach,
+			on_attach = function(client, bufnr)
+				-- Disable ESLint formatting in favor of conform.nvim
+				client.server_capabilities.documentFormattingProvider = false
+				client.server_capabilities.documentRangeFormattingProvider = false
+				on_attach(client, bufnr)
+			end,
 			capabilities = capabilities,
+			settings = {
+				workingDirectories = { mode = "auto" },
+				experimental = {
+					useFlatConfig = nil,
+				},
+			},
+			-- root_dir = function(fname)
+			--   local util = require("lspconfig.util")
+			--   return util.root_pattern(
+			--     ".eslintrc",
+			--     ".eslintrc.js",
+			--     ".eslintrc.json",
+			--     ".eslintrc.cjs",
+			--     "eslint.config.js",
+			--     "eslint.config.mjs",
+			--     "eslint.config.cjs"
+			--   )(fname) or util.find_git_ancestor(fname)
+			-- end,
 		})
 
 		vim.lsp.config("roslyn", {
-			on_attach = function()
-				print("This will run when the server attaches!")
-			end,
+			on_attach = on_attach,
 			settings = {
 				["csharp|inlay_hints"] = {
 					csharp_enable_inlay_hints_for_implicit_object_creation = true,

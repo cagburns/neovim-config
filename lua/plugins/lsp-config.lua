@@ -26,15 +26,14 @@ return {
 
     local on_attach = function(_, bufnr)
       local opts = { buffer = bufnr }
-      vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
-      vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
-      vim.keymap.set("n", "gI", vim.lsp.buf.implementation, opts)
-      vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
-      vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
-      vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts)
-      vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, opts)
-      vim.keymap.set("n", "]d", vim.diagnostic.goto_next, opts)
-      vim.keymap.set("n", "]d", vim.diagnostic.goto_next, opts)
+      vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts, { desc = "Go to Definition" })
+      vim.keymap.set("n", "gr", vim.lsp.buf.references, opts, { desc = "Go to References" })
+      vim.keymap.set("n", "gI", vim.lsp.buf.implementation, opts, { desc = "Go to Implementation" })
+      vim.keymap.set("n", "K", vim.lsp.buf.hover, opts, { desc = "Hover Documentation" })
+      vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts, { desc = "Rename Symbol" })
+      vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts, { desc = "Code Action" })
+      vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, opts, { desc = "Go to Previous Diagnostic" })
+      vim.keymap.set("n", "]d", vim.diagnostic.goto_next, opts, { desc = "Go to Next Diagnostic" })
     end
 
     -- Capabilities for cmp

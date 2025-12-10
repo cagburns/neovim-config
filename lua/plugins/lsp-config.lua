@@ -20,6 +20,7 @@ return {
         "cssls",
         "eslint",
         "lua_ls",
+        "rust_analyzer",
       },
       automatic_installation = true,
     })
@@ -110,7 +111,6 @@ return {
     })
 
     vim.lsp.config("lua_ls", {
-      on_attach = on_attach,
       settings = {
         Lua = {
           diagnostics = {
@@ -119,6 +119,6 @@ return {
         },
       },
     })
-    vim.lsp.enable({ "ts_ls", "angularls", "html", "cssls", "eslint", "lua_ls", "roslyn" })
+    vim.lsp.enable({ "ts_ls", "angularls", "html", "cssls", "eslint", "lua_ls", "roslyn", "rust_analyzer" })
   end,
 }

@@ -1,8 +1,8 @@
 -- Views/Sidebars
 vim.keymap.set("n", "<leader>ee", ":Oil<CR>", { desc = "Toggle File Explorer" })
-vim.keymap.set("n", "<leader>vg", ":Neogit<CR>", { desc = "Open Git Status" })
+vim.keymap.set("n", "<leader>gg", ":Neogit<CR>", { desc = "Open Git Status" })
 vim.keymap.set("n", "<leader>vo", ":copen<CR>", { desc = "Toggle Quickfix" })
-vim.keymap.set("n", "<leader>vt", ":ToggleTerm<CR>", { desc = "Toggle Terminal" }) -- Requires toggleterm.nvim
+vim.keymap.set("n", "<leader>tt", ":ToggleTerm<CR>", { desc = "Toggle Terminal" }) -- Requires toggleterm.nvim
 -- vim.keymap.set("n", "<leader>vd", ":lua require'dap'.toggle_breakpoint()<CR>", { desc = "Toggle Debugger" }) -- Requires nvim-dap
 
 -- Editor Management
@@ -23,7 +23,7 @@ vim.keymap.set("n", "<leader>wj", "<C-w>j", { desc = "Focus Lower Window" })
 vim.keymap.set("n", "<leader>wk", "<C-w>k", { desc = "Focus Upper Window" })
 
 -- Errors
-vim.keymap.set("n", "<leader>tt", "<cmd>Trouble diagnostics toggle<cr>", { desc = "Toggle Trouble" })
+vim.keymap.set("n", "<leader>ve", "<cmd>Trouble diagnostics toggle<cr>", { desc = "Toggle Trouble" })
 vim.keymap.set("n", "<leader>en", ":lua vim.diagnostic.goto_next()<CR>", { desc = "Next Diagnostic" })
 vim.keymap.set("n", "<leader>ep", ":lua vim.diagnostic.goto_prev()<CR>", { desc = "Previous Diagnostic" })
 

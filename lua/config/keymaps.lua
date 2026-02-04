@@ -3,13 +3,13 @@ vim.keymap.set("n", "<leader>fe", ":Oil<CR>", { desc = "Toggle File Explorer" })
 vim.keymap.set("n", "<leader>gg", ":Neogit<CR>", { desc = "Open Git Status" })
 vim.keymap.set("n", "<leader>vo", ":copen<CR>", { desc = "Toggle Quickfix" })
 vim.keymap.set("n", "<leader>tt", ":ToggleTerm<CR>", { desc = "Toggle Terminal" }) -- Requires toggleterm.nvim
-vim.keymap.set("n", "\\", ":Neotree toggle<CR>", { desc = "Toggle Neotree" }) -- Requires neotree.nvim
+vim.keymap.set("n", "\\", ":Neotree toggle<CR>", { desc = "Toggle Neotree" })      -- Requires neotree.nvim
 -- vim.keymap.set("n", "<leader>vd", ":lua require'dap'.toggle_breakpoint()<CR>", { desc = "Toggle Debugger" }) -- Requires nvim-dap
 
 -- Editor Management
-vim.keymap.set("n", "<leader>ss", ":w<CR>", { desc = "Save File" })
-vim.keymap.set("n", "<leader>sa", ":wa<CR>", { desc = "Save All Files" })
-vim.keymap.set("n", "<leader>sq", ":wq<CR>", { desc = "Save and Quit" })
+vim.keymap.set("n", "<leader>ww", ":w<CR>", { desc = "Save File" })
+vim.keymap.set("n", "<leader>wa", ":wa<CR>", { desc = "Save All Files" })
+vim.keymap.set("n", "<leader>wq", ":wq<CR>", { desc = "Save and Quit" })
 vim.keymap.set("n", "<leader>qq", ":q<CR>", { desc = "Quit" })
 
 -- Buffer Management

@@ -4,6 +4,7 @@ vim.keymap.set("n", "<leader>gg", ":Neogit<CR>", { desc = "Open Git Status" })
 vim.keymap.set("n", "<leader>vo", ":copen<CR>", { desc = "Toggle Quickfix" })
 vim.keymap.set("n", "<leader>tt", ":ToggleTerm<CR>", { desc = "Toggle Terminal" }) -- Requires toggleterm.nvim
 vim.keymap.set("n", "\\", ":Neotree toggle<CR>", { desc = "Toggle Neotree" })      -- Requires neotree.nvim
+vim.keymap.set("n", "<leader>cc", ":CopilotChatToggle<CR>", { desc = "Toggle Copilot Chat" })
 -- vim.keymap.set("n", "<leader>vd", ":lua require'dap'.toggle_breakpoint()<CR>", { desc = "Toggle Debugger" }) -- Requires nvim-dap
 
 -- Editor Management
@@ -35,3 +36,6 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Scroll Up and Center" })
 -- Leap.nvim
 vim.keymap.set("n", "s", "<Plug>(leap)", { desc = "Leap" })
 vim.keymap.set("n", "S", "<Plug>(leap-from-window)", { desc = "Leap Forward From Window" })
+
+vim.keymap.set("n", "z%", "0<S-v>%zf", { desc = "Fold to Matching Bracket" })
+vim.keymap.set("n", "zi", "gg<S-v>}zf", { desc = "Fold imports" })

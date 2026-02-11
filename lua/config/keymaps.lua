@@ -1,6 +1,5 @@
 -- Views/Sidebars
 vim.keymap.set("n", "<leader>fe", ":Oil<CR>", { desc = "Toggle File Explorer" })
-vim.keymap.set("n", "<leader>gg", ":Neogit<CR>", { desc = "Open Git Status" })
 vim.keymap.set("n", "<leader>vo", ":copen<CR>", { desc = "Toggle Quickfix" })
 vim.keymap.set("n", "<leader>tt", ":ToggleTerm<CR>", { desc = "Toggle Terminal" }) -- Requires toggleterm.nvim
 vim.keymap.set("n", "\\", ":Neotree toggle<CR>", { desc = "Toggle Neotree" })      -- Requires neotree.nvim

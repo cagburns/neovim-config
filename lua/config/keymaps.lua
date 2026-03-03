@@ -13,8 +13,8 @@ vim.keymap.set("n", "<leader>wq", ":wq<CR>", { desc = "Save and Quit" })
 vim.keymap.set("n", "<leader>qq", ":q<CR>", { desc = "Quit" })
 
 -- Buffer Management
-vim.keymap.set("n", "<leader>bn", ":bnext<CR>", { desc = "Next Buffer" })
-vim.keymap.set("n", "<leader>bp", ":bprevious<CR>", { desc = "Previous Buffer" })
+vim.keymap.set("n", "<leader>bl", ":bnext<CR>", { desc = "Next Buffer" })
+vim.keymap.set("n", "<leader>bh", ":bprevious<CR>", { desc = "Previous Buffer" })
 
 -- Window Navigation
 vim.keymap.set("n", "<leader>wv", ":vsplit<CR>", { desc = "Split Window Vertically" })
@@ -23,10 +23,16 @@ vim.keymap.set("n", "<leader>wl", "<C-w>l", { desc = "Focus Right Window" })
 vim.keymap.set("n", "<leader>wj", "<C-w>j", { desc = "Focus Lower Window" })
 vim.keymap.set("n", "<leader>wk", "<C-w>k", { desc = "Focus Upper Window" })
 
+-- Tabs
+vim.keymap.set("n", "<leader>tn", ":tabnew<CR>", { desc = "New Tab" })
+vim.keymap.set("n", "<leader>tc", ":tabclose<CR>", { desc = "Close Tab" })
+vim.keymap.set("n", "<leader>tl", ":tabnext<CR>", { desc = "Next Tab" })
+vim.keymap.set("n", "<leader>th", ":tabprevious<CR>", { desc = "Previous Tab" })
+
 -- Errors
 vim.keymap.set("n", "<leader>ee", "<cmd>Trouble diagnostics toggle<cr>", { desc = "Toggle Trouble" })
-vim.keymap.set("n", "<leader>en", ":lua vim.diagnostic.goto_next()<CR>", { desc = "Next Diagnostic" })
-vim.keymap.set("n", "<leader>ep", ":lua vim.diagnostic.goto_prev()<CR>", { desc = "Previous Diagnostic" })
+vim.keymap.set("n", "<leader>el", ":lua vim.diagnostic.goto_next()<CR>", { desc = "Next Diagnostic" })
+vim.keymap.set("n", "<leader>eh", ":lua vim.diagnostic.goto_prev()<CR>", { desc = "Previous Diagnostic" })
 
 -- Navigation
 vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Scroll Down and Center" })

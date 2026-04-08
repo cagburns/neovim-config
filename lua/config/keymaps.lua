@@ -2,7 +2,7 @@
 vim.keymap.set("n", "<leader>fe", ":Oil<CR>", { desc = "Toggle File Explorer" })
 vim.keymap.set("n", "<leader>vo", ":copen<CR>", { desc = "Toggle Quickfix" })
 vim.keymap.set("n", "<leader>tt", ":ToggleTerm<CR>", { desc = "Toggle Terminal" }) -- Requires toggleterm.nvim
-vim.keymap.set("n", "\\", ":Neotree toggle<CR>", { desc = "Toggle Neotree" })      -- Requires neotree.nvim
+vim.keymap.set("n", "\\", ":Neotree toggle<CR>", { desc = "Toggle Neotree" }) -- Requires neotree.nvim
 vim.keymap.set("n", "<leader>cc", ":CopilotChatToggle<CR>", { desc = "Toggle Copilot Chat" })
 -- vim.keymap.set("n", "<leader>vd", ":lua require'dap'.toggle_breakpoint()<CR>", { desc = "Toggle Debugger" }) -- Requires nvim-dap
 

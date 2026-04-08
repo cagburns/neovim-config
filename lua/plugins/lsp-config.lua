@@ -29,20 +29,14 @@ return {
       local opts = { buffer = bufnr }
       vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts, { desc = "Go to Definition" })
       vim.keymap.set("n", "gr", vim.lsp.buf.references, opts, { desc = "Go to References" })
-      vim.keymap.set("n", "gI", vim.lsp.buf.implementation, opts, { desc = "Go to Implementation" })
+      vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts, { desc = "Go to Implementation" })
       vim.keymap.set("n", "K", vim.lsp.buf.hover, opts, { desc = "Hover Documentation" })
       vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts, { desc = "Rename Symbol" })
       vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts, { desc = "Code Action" })
-      vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, opts, { desc = "Go to Previous Diagnostic" })
-      vim.keymap.set("n", "]d", vim.diagnostic.goto_next, opts, { desc = "Go to Next Diagnostic" })
     end
 
     -- Capabilities for cmp
     local capabilities = require("cmp_nvim_lsp").default_capabilities()
-    vim.lsp.config("csharp_ls", {
-      on_attach = on_attach,
-      capabilities = capabilities,
-    })
 
     -- TypeScript/JavaScript
     vim.lsp.config("ts_ls", {
@@ -83,31 +77,6 @@ return {
           useFlatConfig = nil,
         },
       },
-      -- root_dir = function(fname)
-      --   local util = require("lspconfig.util")
-      --   return util.root_pattern(
-      --     ".eslintrc",
-      --     ".eslintrc.js",
-      --     ".eslintrc.json",
-      --     ".eslintrc.cjs",
-      --     "eslint.config.js",
-      --     "eslint.config.mjs",
-      --     "eslint.config.cjs"
-      --   )(fname) or util.find_git_ancestor(fname)
-      -- end,
-    })
-
-    vim.lsp.config("roslyn", {
-      on_attach = on_attach,
-      settings = {
-        ["csharp|inlay_hints"] = {
-          csharp_enable_inlay_hints_for_implicit_object_creation = true,
-          csharp_enable_inlay_hints_for_implicit_variable_types = true,
-        },
-        ["csharp|code_lens"] = {
-          dotnet_enable_references_code_lens = true,
-        },
-      },
     })
 
     vim.lsp.config("lua_ls", {
@@ -119,6 +88,6 @@ return {
         },
       },
     })
-    vim.lsp.enable({ "ts_ls", "angularls", "html", "cssls", "eslint", "lua_ls", "roslyn", "rust_analyzer" })
+    vim.lsp.enable({ "ts_ls", "angularls", "html", "cssls", "eslint", "lua_ls", "rust_analyzer" })
   end,
 }

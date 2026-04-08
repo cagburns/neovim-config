@@ -8,6 +8,7 @@ return {
     "typescriptreact",
     "css",
     "scss",
+    "less",
     "json",
     "graphql",
     "markdown",

@@ -18,10 +18,10 @@ vim.keymap.set("n", "<leader>bh", ":bprevious<CR>", { desc = "Previous Buffer" }
 
 -- Window Navigation
 vim.keymap.set("n", "<leader>wv", ":vsplit<CR>", { desc = "Split Window Vertically" })
-vim.keymap.set("n", "<leader>wh", "<C-w>h", { desc = "Focus Left Window" })
-vim.keymap.set("n", "<leader>wl", "<C-w>l", { desc = "Focus Right Window" })
-vim.keymap.set("n", "<leader>wj", "<C-w>j", { desc = "Focus Lower Window" })
-vim.keymap.set("n", "<leader>wk", "<C-w>k", { desc = "Focus Upper Window" })
+vim.keymap.set("n", "<leader>wh", "<Esc><C-w>h", { desc = "Focus Left Window" })
+vim.keymap.set("n", "<leader>wl", "<Esc><C-w>l", { desc = "Focus Right Window" })
+vim.keymap.set("n", "<leader>wj", "<Esc><C-w>j", { desc = "Focus Lower Window" })
+vim.keymap.set("n", "<leader>wk", "<Esc><C-w>k", { desc = "Focus Upper Window" })
 
 -- Tabs
 vim.keymap.set("n", "<leader>tn", ":tabnew<CR>", { desc = "New Tab" })
@@ -44,3 +44,5 @@ vim.keymap.set("n", "S", "<Plug>(leap-from-window)", { desc = "Leap Forward From
 
 vim.keymap.set("n", "z%", "0<S-v>%zf", { desc = "Fold to Matching Bracket" })
 vim.keymap.set("n", "zi", "gg<S-v>}zf", { desc = "Fold imports" })
+
+vim.keymap.set("n", "<leader>we", "<C-w>=", { desc = "Equalize Window Sizes" })

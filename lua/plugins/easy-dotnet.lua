@@ -1,6 +1,7 @@
 vim.pack.add({
   "https://www.github.com/GustavEikaas/easy-dotnet.nvim",
   "https://www.github.com/nvim-lua/plenary.nvim",
+  "https://www.github.com/nvim-telescope/telescope.nvim",
   "https://www.github.com/mfussenegger/nvim-dap",
 })
 

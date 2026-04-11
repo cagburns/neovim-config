@@ -3,7 +3,7 @@ vim.pack.add({ "https://github.com/folke/snacks.nvim" })
 require("snacks").setup({
   animate = { enabled = true },
   bigfile = { enabled = true },
-  dashboard = { enabled = true },
+  -- dashboard = { enabled = true },
   explorer = { enabled = false },
   indent = { enabled = false },
   input = { enabled = true },

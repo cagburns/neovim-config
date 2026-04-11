@@ -3,7 +3,7 @@ require("config.options")
 require("config.autocmds")
 require("plugins")
 
-vim.cmd.colorscheme("kanagawa")
+vim.cmd.colorscheme("kanagawa-dragon")
 --
 -- -- Auto-clean old main.shada.tmp.* files on startup (Windows-safe)
 -- local shada_dir = vim.fn.stdpath("data") .. "\\shada"

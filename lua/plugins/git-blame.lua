@@ -1,6 +1,5 @@
--- vim.pack.add({ "https://www.github.com/f-person/git-blame.nvim" })
+vim.pack.add({ "https://www.github.com/f-person/git-blame.nvim" })
 -- require("git-blame").setup({
---   event = "VeryLazy",
 --   opts = {
 --     enabled = true,
 --     message_template = " <summary> • <date> • <author> • <<sha>>", -- template for the blame message, check the Message template section for more options

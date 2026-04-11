@@ -1,8 +1,8 @@
 vim.pack.add({
+  "https://github.com/nvim-lua/plenary.nvim",
   "https://www.github.com/nvim-telescope/telescope.nvim",
   "https://www.github.com/nvim-telescope/telescope-ui-select.nvim",
   "https://www.github.com/nvim-telescope/telescope-fzf-native.nvim",
-  "https://github.com/nvim-lua/plenary.nvim",
 })
 
 -- Run make in the fzf-native directory after pack sync

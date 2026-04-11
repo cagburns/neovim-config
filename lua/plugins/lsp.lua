@@ -1,18 +1,44 @@
-local function enable_all_servers()
-  local lsp_dir = vim.fn.stdpath("config") .. "/lsp"
-  local lsp_servers = {}
+vim.pack.add({
+  "https://github.com/neovim/nvim-lspconfig",
+  "https://github.com/mason-org/mason.nvim",
+  "https://github.com/mason-org/mason-lspconfig.nvim",
+  "https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim",
+})
 
-  if vim.fn.isdirectory(lsp_dir) == 1 then
-    for _, file in ipairs(vim.fn.readdir(lsp_dir)) do
-      if file:match("%.lua$") and file ~= "init.lua" then
-        local server_name = file:gsub("%.lua$", "")
-        table.insert(lsp_servers, server_name)
-      end
-    end
-  end
+require("mason").setup()
+require("mason-lspconfig").setup()
+require("mason-tool-installer").setup({
+  ensure_installed = {
+    "lua_ls",
+    "eslint",
+    "rust_analyzer",
+    "html",
+    "cssls",
+    "jsonls",
+    "ts_ls",
+    "angularls",
+  },
+})
 
-  vim.lsp.enable(lsp_servers)
-end
+vim.lsp.config("lua_ls", {
+  settings = {
+    Lua = {
+      runtime = {
+        version = "LuaJIT",
+      },
+      diagnostics = {
+        globals = { "vim", "require" },
+      },
+      workspace = {
+        library = vim.api.nvim_get_runtime_file("", true),
+        checkThirdParty = false,
+      },
+      telemetry = {
+        enable = false,
+      },
+    },
+  },
+})
 
 local icons = {
   Error = "󰅚 ",
@@ -57,5 +83,3 @@ vim.api.nvim_create_autocmd("LspAttach", {
     vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, vim.tbl_extend("force", opts, { desc = "Code Action" }))
   end,
 })
-
-enable_all_servers()

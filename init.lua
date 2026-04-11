@@ -1,12 +1,9 @@
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
-
-require("config.options")
 require("config.keymaps")
+require("config.options")
 require("config.autocmds")
-require("config.lazy")
+require("plugins")
 
-vim.cmd([[colorscheme kanagawa-dragon]])
+vim.cmd.colorscheme("kanagawa")
 --
 -- -- Auto-clean old main.shada.tmp.* files on startup (Windows-safe)
 -- local shada_dir = vim.fn.stdpath("data") .. "\\shada"

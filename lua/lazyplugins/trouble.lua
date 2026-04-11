@@ -1,11 +1,16 @@
-vim.pack.add({ "https://github.com/folke/trouble.nvim" })
-require("trouble").setup({
+return {
+  "folke/trouble.nvim",
   cmd = "Trouble",
   opts = {
-    auto_close = true,
-    focus = true,
+  auto_close = true,
+  focus = true,
   },
   keys = {
+    {
+      "<leader>xx",
+      "<cmd>Trouble diagnostics toggle<cr>",
+      desc = "Diagnostics (Trouble)",
+    },
     {
       "<leader>xX",
       "<cmd>Trouble diagnostics toggle filter.buf=0<cr>",
@@ -32,4 +37,5 @@ require("trouble").setup({
       desc = "Quickfix List (Trouble)",
     },
   },
-})
+
+}

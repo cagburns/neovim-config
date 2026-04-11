@@ -1,3 +1,6 @@
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
 -- Views/Sidebars
 vim.keymap.set("n", "<leader>fe", ":Oil<CR>", { desc = "Toggle File Explorer" })
 vim.keymap.set("n", "<leader>vo", ":copen<CR>", { desc = "Toggle Quickfix" })
@@ -31,8 +34,8 @@ vim.keymap.set("n", "<leader>th", ":tabprevious<CR>", { desc = "Previous Tab" })
 
 -- Errors
 vim.keymap.set("n", "<leader>ee", "<cmd>Trouble diagnostics toggle<cr>", { desc = "Toggle Trouble" })
-vim.keymap.set("n", "<leader>el", ":lua vim.diagnostic.goto_next()<CR>", { desc = "Next Diagnostic" })
-vim.keymap.set("n", "<leader>eh", ":lua vim.diagnostic.goto_prev()<CR>", { desc = "Previous Diagnostic" })
+vim.keymap.set("n", "<leader>el", ":lua vim.diagnostic.jump({count = 1})<CR>", { desc = "Next Diagnostic" })
+vim.keymap.set("n", "<leader>eh", ":lua vim.diagnostic.jump({count = -1})<CR>", { desc = "Previous Diagnostic" })
 
 -- Navigation
 vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Scroll Down and Center" })

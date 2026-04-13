@@ -41,6 +41,9 @@ vim.keymap.set("n", "<leader>eh", ":lua vim.diagnostic.jump({count = -1})<CR>", 
 vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Scroll Down and Center" })
 vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Scroll Up and Center" })
 
+-- Formatting
+vim.keymap.set("n", "<leader>rf", ":Prettier<CR>", { desc = "Format Document"})
+
 -- Leap.nvim
 vim.keymap.set("n", "s", "<Plug>(leap)", { desc = "Leap" })
 vim.keymap.set("n", "S", "<Plug>(leap-from-window)", { desc = "Leap Forward From Window" })

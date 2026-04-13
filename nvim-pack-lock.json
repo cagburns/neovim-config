@@ -13,10 +13,6 @@
       "rev": "98d9cb5c2c38532bd9bdb481067b20fea8f32e90",
       "src": "https://www.github.com/saadparwaiz1/cmp_luasnip"
     },
-    "conform.nvim": {
-      "rev": "086a40dc7ed8242c03be9f47fbcee68699cc2395",
-      "src": "https://www.github.com/stevearc/conform.nvim"
-    },
     "copilot.vim": {
       "rev": "a12fd5672110c8aa7e3c8419e28c96943ca179be",
       "src": "https://www.github.com/github/copilot.vim"
@@ -133,6 +129,10 @@
     "trouble.nvim": {
       "rev": "bd67efe408d4816e25e8491cc5ad4088e708a69a",
       "src": "https://github.com/folke/trouble.nvim"
+    },
+    "vim-prettier": {
+      "rev": "7dbdbb12c50a9f4ba72390cce2846248e4368fd0",
+      "src": "https://github.com/prettier/vim-prettier"
     },
     "vim-repeat": {
       "rev": "65846025c15494983dafe5e3b46c8f88ab2e9635",

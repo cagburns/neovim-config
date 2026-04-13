@@ -5,7 +5,7 @@ vim.g.maplocalleader = " "
 vim.keymap.set("n", "<leader>fe", ":Oil<CR>", { desc = "Toggle File Explorer" })
 vim.keymap.set("n", "<leader>vo", ":copen<CR>", { desc = "Toggle Quickfix" })
 vim.keymap.set("n", "<leader>tt", ":ToggleTerm<CR>", { desc = "Toggle Terminal" }) -- Requires toggleterm.nvim
-vim.keymap.set("n", "\\", ":Neotree toggle<CR>", { desc = "Toggle Neotree" }) -- Requires neotree.nvim
+vim.keymap.set("n", "\\", ":Neotree toggle<CR>", { desc = "Toggle Neotree" })      -- Requires neotree.nvim
 vim.keymap.set("n", "<leader>cc", ":CopilotChatToggle<CR>", { desc = "Toggle Copilot Chat" })
 -- vim.keymap.set("n", "<leader>vd", ":lua require'dap'.toggle_breakpoint()<CR>", { desc = "Toggle Debugger" }) -- Requires nvim-dap
 
@@ -49,3 +49,10 @@ vim.keymap.set("n", "z%", "0<S-v>%zf", { desc = "Fold to Matching Bracket" })
 vim.keymap.set("n", "zi", "gg<S-v>}zf", { desc = "Fold imports" })
 
 vim.keymap.set("n", "<leader>we", "<C-w>=", { desc = "Equalize Window Sizes" })
+
+-- Persistence.nvim
+vim.keymap.set("n", "<leader>p.", function() require("persistence").load() end, { desc = "Load Session" })
+vim.keymap.set("n", "<leader>ps", function() require("persistence").select() end, { desc = "Select Session" })
+vim.keymap.set("n", "<leader>pl", function() require("persistence").load({ last = true }) end,
+  { desc = "Load Last Session" })
+vim.keymap.set("n", "<leader>pq", function() require("persistence").stop() end, { desc = "Stop Persistence" })

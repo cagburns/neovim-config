@@ -1,1 +1,1 @@
-vim.pack.add({ "elvessousa/sobrio" })
+vim.pack.add({ "https://github.com/elvessousa/sobrio" })

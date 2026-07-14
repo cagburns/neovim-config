@@ -9,7 +9,8 @@ require("mason").setup()
 require("mason-lspconfig").setup()
 require("mason-tool-installer").setup({
   ensure_installed = {
-    "lua_ls",
+    "lua-language-server",
+    "prettier",
     "stylua",
     "eslint",
     "rust_analyzer",
@@ -21,7 +22,7 @@ require("mason-tool-installer").setup({
   },
 })
 
-vim.lsp.config("lua_ls", {
+vim.lsp.config("lua-language-server", {
   settings = {
     Lua = {
       runtime = {

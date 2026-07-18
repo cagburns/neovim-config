@@ -9,6 +9,8 @@ local function set_terminal_keymaps()
   vim.keymap.set("t", "<C-k>", [[<Cmd>wincmd k<CR>]], opts)
   vim.keymap.set("t", "<C-l>", [[<Cmd>wincmd l<CR>]], opts)
   vim.keymap.set("t", "<C-w>", [[<C-\><C-n><C-w>]], opts)
+  -- Restore Ctrl-C to send interrupt signal to terminal process
+  vim.keymap.set("t", "<C-c>", [[<C-c>]], opts)
 end
 
 require("toggleterm").setup({

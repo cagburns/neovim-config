@@ -59,3 +59,6 @@ vim.keymap.set("n", "<leader>ps", function() require("persistence").select() end
 vim.keymap.set("n", "<leader>pl", function() require("persistence").load({ last = true }) end,
   { desc = "Load Last Session" })
 vim.keymap.set("n", "<leader>pq", function() require("persistence").stop() end, { desc = "Stop Persistence" })
+
+-- Mini
+vim.keymap.set("n", "<leader>mm", ":lua MiniMan.toggle()<CR>", { desc = "Toggle MiniMap" })

@@ -14,6 +14,7 @@ require("nvim-treesitter").setup({
     "c_sharp",
     "c",
     "json",
+    "yaml",
     "lua",
     "vim",
     "vimdoc",

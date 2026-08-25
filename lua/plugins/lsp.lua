@@ -18,6 +18,7 @@ require("mason-tool-installer").setup({
     "jsonls",
     "ts_ls",
     "angularls",
+    "yamlls",
   },
 })
 
@@ -36,6 +37,20 @@ vim.lsp.config("lua_ls", {
       },
       telemetry = {
         enable = false,
+      },
+    },
+  },
+})
+
+vim.lsp.config("yamlls", {
+  settings = {
+    yaml = {
+      keyOrdering = false,
+      format = { enable = true },
+      validate = true,
+      schemaStore = {
+        enable = true,
+        url = "https://www.schemastore.org/api/json/catalog.json",
       },
     },
   },

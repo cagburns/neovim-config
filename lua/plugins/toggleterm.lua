@@ -13,8 +13,12 @@ local function set_terminal_keymaps()
   vim.keymap.set("t", "<C-c>", [[<C-c>]], opts)
 end
 
+-- Prefer pwsh (PowerShell 7+), falling back to Windows PowerShell
+local powershell = vim.fn.executable("pwsh") == 1 and "pwsh" or "powershell"
+
 require("toggleterm").setup({
   version = "*",
+  shell = powershell,
   -- Set up the autocommand for terminal keymaps
   vim.api.nvim_create_autocmd("TermOpen", {
     pattern = "term://*",

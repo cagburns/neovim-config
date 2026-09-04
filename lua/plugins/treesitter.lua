@@ -18,6 +18,7 @@ require("nvim-treesitter").setup({
     "lua",
     "vim",
     "vimdoc",
+    "powershell",
   },
   auto_install = true,
   highlight = { enable = true },

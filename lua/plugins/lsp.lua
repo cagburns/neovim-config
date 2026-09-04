@@ -19,6 +19,7 @@ require("mason-tool-installer").setup({
     "ts_ls",
     "angularls",
     "yamlls",
+    "powershell_es",
   },
 })
 

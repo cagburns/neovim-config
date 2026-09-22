@@ -10,3 +10,4 @@ plugin/
 *.log
 .luarc.json
 .stylua.toml
+.DS_Store

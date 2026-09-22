@@ -8,18 +8,19 @@ vim.pack.add({
 require("mason").setup()
 require("mason-lspconfig").setup()
 require("mason-tool-installer").setup({
-  ensure_installed = {
-    "lua-language-server",
-    "prettier",
-    "stylua",
-    "eslint",
-    "rust_analyzer",
-    "html",
-    "cssls",
-    "jsonls",
-    "ts_ls",
-    "angularls",
-  },
+  ensure_installed = (function()
+    local ensure = { "lua-language-server", "html", "cssls", "jsonls", "ts_ls", "angularls" }
+    if vim.fn.executable("prettier") == 0 then
+      table.insert(ensure, "prettier")
+    end
+    if vim.fn.executable("stylua") == 0 then
+      table.insert(ensure, "stylua")
+    end
+    if vim.fn.executable("rust-analyzer") == 0 and vim.fn.executable("rust_analyzer") == 0 then
+      table.insert(ensure, "rust_analyzer")
+    end
+    return ensure
+  end)(),
 })
 
 vim.lsp.config("lua-language-server", {

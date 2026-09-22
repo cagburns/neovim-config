@@ -5,10 +5,14 @@ vim.pack.add({
   "https://www.github.com/nvim-telescope/telescope-fzf-native.nvim",
 })
 
--- Run make in the fzf-native directory after pack sync
+-- Run make in the fzf-native directory after pack sync#
 local fzf_path = vim.fn.stdpath("data") .. "/site/pack/nvim/opt/telescope-fzf-native.nvim"
 if vim.fn.filereadable(fzf_path .. "/Makefile") == 1 and vim.fn.filereadable(fzf_path .. "/build/libfzf.so") == 0 then
-  vim.fn.system({ "make", "-C", fzf_path })
+  if vim.fn.executable("make") == 1 then
+    vim.fn.system({ "make", "-C", fzf_path })
+  else
+    vim.notify("Skipping build for telescope-fzf-native: 'make' not found", vim.log.levels.WARN)
+  end
 end
 
 local telescope = require("telescope")
@@ -27,14 +31,20 @@ end
 
 telescope.setup({
   defaults = {
-    vimgrep_arguments = {
-      "rg",
-      "--no-heading",
-      "--with-filename",
-      "--line-number",
-      "--column",
-      "--smart-case",
-    },
+    vimgrep_arguments = (function()
+      if vim.fn.executable("rg") == 1 then
+        return {
+          "rg",
+          "--no-heading",
+          "--with-filename",
+          "--line-number",
+          "--column",
+          "--smart-case",
+        }
+      end
+      -- fallback to grep if ripgrep isn't available
+      return { "grep", "-R", "-nH" }
+    end)(),
     file_ignore_patterns = { "node_modules", "dist" },
     mappings = {
       i = {

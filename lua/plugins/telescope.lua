@@ -35,7 +35,7 @@ telescope.setup({
       "--column",
       "--smart-case",
     },
-    file_ignore_patterns = { "node_modules", "dist" },
+    file_ignore_patterns = { "node_modules", "dist", "bin", "obj", "%.git/", "%.angular", "coverage" },
     mappings = {
       i = {
         ["<C-u>"] = false,

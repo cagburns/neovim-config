@@ -5,23 +5,28 @@ vim.pack.add({
   "https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim",
 })
 
-require("mason").setup()
+-- mason.nvim itself is set up in plugins/mason.lua (loaded first).
 require("mason-lspconfig").setup()
-require("mason-tool-installer").setup({
-  ensure_installed = {
-    "lua_ls",
-    "stylua",
-    "eslint",
-    "rust_analyzer",
-    "html",
-    "cssls",
-    "jsonls",
-    "ts_ls",
-    "angularls",
-    "yamlls",
-    "powershell_es",
-  },
-})
+
+-- Defer the tool-install check (a Mason registry/network-ish operation) off
+-- the startup path; it only needs to run once the UI is already up.
+vim.schedule(function()
+  require("mason-tool-installer").setup({
+    ensure_installed = {
+      "lua_ls",
+      "stylua",
+      "eslint",
+      "rust_analyzer",
+      "html",
+      "cssls",
+      "jsonls",
+      "ts_ls",
+      "angularls",
+      "yamlls",
+      "powershell_es",
+    },
+  })
+end)
 
 vim.lsp.config("lua_ls", {
   settings = {

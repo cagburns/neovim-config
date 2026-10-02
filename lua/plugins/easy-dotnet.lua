@@ -16,7 +16,10 @@ dotnet.setup({
   external_terminal = nil,
   lsp = {
     enabled = true, -- Enable builtin roslyn lsp
-    preload_roslyn = true, -- Start loading roslyn before any buffer is opened
+    -- This plugin is now only loaded once a .cs/.fsproj/.sln file is opened
+    -- (see lua/plugins/init.lua), so "preload before any buffer" no longer
+    -- applies - avoid an extra eager solution-wide Roslyn spin-up.
+    preload_roslyn = false,
     roslynator_enabled = true, -- Automatically enable roslynator analyzer
     easy_dotnet_analyzer_enabled = true, -- Enable roslyn analyzer from easy-dotnet-server
     auto_refresh_codelens = true,
